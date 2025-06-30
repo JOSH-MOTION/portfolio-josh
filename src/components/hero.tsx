@@ -33,11 +33,12 @@ const Hero = () => {
             ))}
           </div>
         </div>
-        <div className="hidden md:flex justify-center">
-            <Avatar className="w-64 h-64 border-4 border-primary shadow-lg">
-                <AvatarImage src="https://placehold.co/400x400.png" alt="Josh" data-ai-hint="developer portrait" />
-                <AvatarFallback>JD</AvatarFallback>
-            </Avatar>
+        <div className="hidden md:flex justify-center relative">
+          <Avatar className="w-80 h-80 border-8 border-primary shadow-2xl relative overflow-hidden">
+            <AvatarImage className="object-cover w-full h-full" src="/images/me.jpg" alt="Josh" />
+            <AvatarFallback>JD</AvatarFallback>
+            <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-secondary to-transparent" />
+          </Avatar>
         </div>
       </div>
     </section>

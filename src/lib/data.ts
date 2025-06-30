@@ -9,34 +9,34 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com', icon: Github },
-    { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
-    { name: 'Email', href: 'mailto:josh@example.com', icon: Mail },
+    { name: 'GitHub', href: 'https://github.com/JOSH-MOTION', icon: Github },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/joshua-doe-560a7523b/', icon: Linkedin },
+    { name: 'Email', href: 'mailto:joshuadoe168@example.com', icon: Mail },
 ];
 
 export const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce website with features like product catalog, shopping cart, and payment integration.',
-    image: 'https://placehold.co/600x400.png',
-    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-    liveUrl: '#',
-    repoUrl: '#',
+    title: 'Payment Platform App',
+    description: 'A full-stack platform for managing donations and payments, featuring a simple checkout flow, real-time tracking, and secure payment integration. Built to support charitable contributions, fundraising, and online payments seamlessly.',
+    image: '/images/payment.png',
+    tags: ['NextJs', 'Node.js', 'Tailwind', 'Firebase',],
+    liveUrl: 'https://josh-pay-josh-motions-projects.vercel.app/',
+    repoUrl: 'https://github.com/JOSH-MOTION/JoshPay.git',
     aiHint: 'online shopping',
   },
   {
-    title: 'Task Management App',
-    description: 'A web application to help users organize tasks, set deadlines, and track progress with a clean and intuitive interface.',
-    image: 'https://placehold.co/600x400.png',
+    title: 'Expense Tracker App',
+    description: 'A web application to help users track income and expenses, set budgets, and visualize spending patterns with a clean and intuitive interface.',
+    image: '/images/budget.png',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Firebase'],
-    liveUrl: '#',
-    repoUrl: '#',
+    liveUrl: 'https://budgetwise-git-master-josh-motions-projects.vercel.app/login',
+    repoUrl: 'https://github.com/JOSH-MOTION/budgetwise.git',
     aiHint: 'productivity app',
   },
   {
     title: 'Portfolio Website',
     description: 'This very portfolio website, designed to showcase my skills and projects in a visually appealing manner.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/images/folio.png',
     tags: ['Next.js', 'GenAI', 'ShadCN UI', 'Tailwind CSS'],
     liveUrl: '#',
     repoUrl: '#',
@@ -66,10 +66,10 @@ export const skills = [
 
 export const experiences = [
   {
-    role: 'Senior Frontend Developer',
-    company: 'Tech Solutions Inc.',
-    period: '2021 - Present',
-    description: 'Leading the development of user-facing features for a major B2B SaaS product. Mentoring junior developers and improving code quality and performance.',
+    role: 'Full Stack Developer',
+    company: 'Codetrain Africa',
+    period: '2024 - Present',
+    description: 'Designing and delivering engaging lessons in web development and software engineering. Guiding students through real-world projects, providing mentorship, and fostering a collaborative learning environment. Also contributing to curriculum development and supporting the growth of Codetrain’s tech community.',
     icon: Briefcase,
   },
   {
