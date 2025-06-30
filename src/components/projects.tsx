@@ -5,9 +5,11 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/lib/data';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 
 const Projects = () => {
+  const displayedProjects = projects.slice(0, 2);
+
   return (
     <section id="projects" className="py-20 md:py-28">
       <div className="container mx-auto">
@@ -16,7 +18,7 @@ const Projects = () => {
           <p className="text-lg text-muted-foreground mt-2">A selection of my recent work.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {displayedProjects.map((project, index) => (
             <Card key={index} className="flex flex-col overflow-hidden transition-transform transform hover:-translate-y-2 duration-300">
               <div className="aspect-video overflow-hidden">
                 <Image
@@ -51,6 +53,13 @@ const Projects = () => {
               </div>
             </Card>
           ))}
+        </div>
+        <div className="mt-16 text-center">
+          <Button asChild size="lg" variant="outline">
+            <Link href="/projects">
+              View All Projects <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
