@@ -29,14 +29,34 @@ const Contact = () => {
   });
 
   const onSubmit: SubmitHandler<ContactFormInputs> = async (data) => {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log(data);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    form.reset();
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Something went wrong.");
+      }
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
+      form.reset();
+
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+      toast({
+        variant: "destructive",
+        title: "Oh no! Something went wrong.",
+        description: `Failed to send message: ${errorMessage}`,
+      });
+    }
   };
 
   return (
